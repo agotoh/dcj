@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    image: datascience-notebook:latest
+    command: start-notebook.sh --NotebookApp.password='sha1:fd82c29419ba:8917a0ba1d97e0666289624c9365db29e449af88'
+    volumes:
+      - ./work/:/home/jovyan/work
+    user: root
+    environment:
+      - GRANT_SUDO=yes
+      - TZ=Asia/Tokyo
+      # - NB_UID=${UID}
+      # - NB_GID=${GID}
+    ports:
+      - "8081:8888"
