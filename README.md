@@ -10,6 +10,7 @@ https://qiita.com/y4m3/items/c2703d4e131e05084b7b
 ## 起動コマンド
 ```
 docker-compose build
-docker-compose up -e NB_UID=$UID -e NB_GID=$GID
+docker-compose up
+```
 localhost:8081に接続する。パスワードはagotoh
 
